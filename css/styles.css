@@ -1,3 +1,20 @@
-.two-column {
+.column-half {
   display: flex;
+}
+
+.two-rows {
+  margin: 0 1.2rem;
+}
+
+.two-rows > input {
+  width: 25rem;
+  height: 2rem;
+}
+
+.two-rows > h3 {
+  margin-bottom: 0.7rem;
+}
+
+textarea {
+  width: 100%;
 }

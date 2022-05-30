@@ -19,34 +19,35 @@
   <header>Code Journal
   </header>
   <main>
-    <div data-view="entry-form">
-      <div class="journal-entry">
-        <form action="">
-          <div class="row">
+    <div class="container">
+      <div class="journal-entry" data-view="entry-form">
+        <div class="row">
+          <div class="column-full">
             <h1>New Entry</h1>
           </div>
-          <div class="row">
-            <div class="two-column">
-              <img src="images/placeholder-image-square.jpg">
-              <div class="two-rows">
-                <h3>Title</h3>
-                <input type="text" id="entry-title" name="title">
-                <h3>Photo URL</h3>
-                <input type="text" id="entry-photo" name="photo">
-              </div>
-
-            </div>
+        </div>
+        <div class="row">
+          <div class="column-half">
+            <img src="images/placeholder-image-square.jpg" width="400">
+            <form action="">
+              <h3>Title</h3>
+              <input type="text" id="entry-title" name="title">
+              <h3>Photo URL</h3>
+              <input type="text" id="entry-photo" name="photo">
+            </form>
           </div>
-          <div class="row">
+        </div>
+        <div class="row">
+          <div class="column-full">
             <h3>Notes</h3>
           </div>
-          <div class="row">
-            <textarea id="notes" name="notes"></textarea>
-          </div>
-          <div class="row">
-            <p><input type="submit" value="SAVE"></p>
-          </div>
-        </form>
+        </div>
+        <div class="row">
+          <textarea id="notes" name="notes"></textarea>
+        </div>
+        <div class="row">
+          <p><input type="submit" value="SAVE"></p>
+        </div>
       </div>
     </div>
   </main>
