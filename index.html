@@ -16,7 +16,8 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>Code Journal
+  <header>
+    <div class="container">Code Journal</div>
   </header>
   <main>
     <div class="container">
@@ -30,23 +31,21 @@
           <div class="column-half">
             <img src="images/placeholder-image-square.jpg" width="400">
             <form action="">
-              <h3>Title</h3>
-              <input type="text" id="entry-title" name="title">
-              <h3>Photo URL</h3>
-              <input type="text" id="entry-photo" name="photo">
+              <div class="two-rows">
+                <h3>Title</h3>
+                <input type="text" id="entry-title" name="title">
+                <h3 class="photo-url">Photo URL</h3>
+                <input type="text" id="entry-photo" name="photo">
+              </div>
             </form>
           </div>
         </div>
         <div class="row">
           <div class="column-full">
             <h3>Notes</h3>
+            <textarea id="notes" name="notes"></textarea>
+            <input type="submit" value="SAVE">
           </div>
-        </div>
-        <div class="row">
-          <textarea id="notes" name="notes"></textarea>
-        </div>
-        <div class="row">
-          <p><input type="submit" value="SAVE"></p>
         </div>
       </div>
     </div>

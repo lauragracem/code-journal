@@ -8,9 +8,14 @@
   padding: 0 1.5rem;
 }
 
+body {
+  margin: 0 auto;
+}
+
 header {
-  max-width: 575px;
-  margin: 0 15rem;
+  font-size: 1.5rem;
+  width: 100%;
+  margin: 1.5rem 0;
 }
 
 .row {
@@ -36,4 +41,41 @@ header {
   .column-half {
     width: 50%;
   }
+}
+
+.column-half {
+  display: flex;
+}
+
+.two-rows {
+  margin-left: 1.2rem;
+  margin-top: 0;
+}
+
+.two-rows > input {
+  width: 26rem;
+  height: 2rem;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+}
+
+textarea {
+  width: 52.2rem;
+  height: 10rem;
+}
+
+.photo-url {
+  margin-top: 2rem;
+}
+
+.column-full > input {
+  margin-top: 1.5rem;
+  margin-left: 49rem;
+}
+
+.column-full > h3 {
+  margin-top: 2rem;
 }
