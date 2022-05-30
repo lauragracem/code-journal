@@ -16,21 +16,32 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
+  <header>Code Journal
   </header>
   <main>
     <div data-view="entry-form">
       <div class="journal-entry">
         <form action="">
-          <h1>New Entry</h1>
-          <img src="images/placeholder-image-square.jpg">
-          <h3>Title</h3>
-          <input type="text" id="entry-title" name="title">
-          <h3>Photo URL</h3>
-          <input type="text" id="entry-photo" name="photo">
-          <h3>Notes</h3>
-          <textarea id="notes" name="notes"></textarea>
-          <p><input type="submit" value="SAVE"></p>
+          <div class="row">
+            <h1>New Entry</h1>
+          </div>
+          <div class="row">
+            <div class="two-column">
+              <img src="images/placeholder-image-square.jpg">
+              <h3>Title</h3>
+              <input type="text" id="entry-title" name="title">
+              <h3>Photo URL</h3>
+              <input type="text" id="entry-photo" name="photo">
+            </div>
+          </div>
+          <div class="three-column">
+            <h3>Notes</h3>
+            <textarea id="notes" name="notes"></textarea>
+            <p><input type="submit" value="SAVE"></p>
+          </div>
+
+
+
         </form>
       </div>
 

@@ -1,0 +1,9 @@
+img {
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 390px) {
+  img {
+    flex-basis: 50%;
+  }
+}
