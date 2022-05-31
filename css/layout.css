@@ -132,8 +132,8 @@ textarea {
   }
 
   .column-half > img {
-    width: 525px;
-    height: 425px;
+    max-width: 425px;
+    max-height: 425px;
   }
 
   .two-rows {
