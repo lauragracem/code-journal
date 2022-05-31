@@ -15,8 +15,8 @@ body {
 header {
   font-size: 1.5rem;
   width: 100%;
-  margin: 1.5rem 0;
-  padding-top: 0.9rem;
+  margin: 0;
+  padding-top: 0.1rem;
   padding-bottom: 0.5rem;
 }
 
@@ -45,31 +45,29 @@ header {
   }
 }
 
-.column-half {
-  display: flex;
-}
+/* base CSS for mobile */
 
-.two-rows {
-  margin-left: 1.2rem;
-  margin-top: 0;
+img {
+  width: 340px;
+  height: 250px;
 }
 
 .two-rows > input {
-  width: 26rem;
+  width: 21.3rem;
   height: 2rem;
 }
 
 h1 {
-  margin-top: 0;
+  margin-top: 1rem;
 }
 
 h3 {
-  margin-top: 0;
+  margin-top: 1.5rem;
   margin-bottom: 0.4rem;
 }
 
 textarea {
-  width: 52.2rem;
+  width: 21.3rem;
   height: 10rem;
 }
 
@@ -77,11 +75,83 @@ textarea {
   margin-top: 1.5rem;
 }
 
-.column-full > input {
+.button {
   margin-top: 1.5rem;
-  margin-left: 48.3rem;
+  margin-left: 17.4rem;
+  margin-bottom: 2rem;
 }
 
 .column-full > h3 {
   margin-top: 1.5rem;
+}
+
+/* small screen */
+@media screen and (min-width: 625px) {
+  img {
+    width: 530px;
+    height: 400px;
+  }
+
+  .two-rows > input {
+    width: 33rem;
+    height: 2rem;
+  }
+
+  h1 {
+    margin-top: 1rem;
+  }
+
+  h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.4rem;
+  }
+
+  textarea {
+    width: 33rem;
+    height: 10rem;
+  }
+
+  .photo-url {
+    margin-top: 1.5rem;
+  }
+
+  .button {
+    margin-top: 1.5rem;
+    margin-left: 29rem;
+    margin-bottom: 2rem;
+  }
+
+  .column-full > h3 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .column-half {
+    display: flex;
+  }
+
+  .column-half > img {
+    width: 525px;
+    height: 425px;
+  }
+
+  .two-rows {
+    margin-left: 1.2rem;
+    margin-top: 0;
+  }
+
+  .two-rows > input {
+    width: 24rem;
+  }
+
+  .column-full > textarea {
+    width: 51.7rem;
+    height: 10rem;
+  }
+
+  .column-full > .button {
+    margin-top: 1.5rem;
+    margin-left: 47.7rem;
+  }
 }
