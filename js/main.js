@@ -19,8 +19,6 @@ var $submit = document.querySelector('#form');
 
 $submit.addEventListener('submit', saveEntry);
 
-// window.addEventListener('beforeunload', saveEntry);
-
 function saveEntry(event) {
   event.preventDefault();
 
