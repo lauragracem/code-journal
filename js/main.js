@@ -1,5 +1,3 @@
-var nextEntryId = 0;
-
 var $photoInput = document.querySelector('#entry-photo');
 var $photoUpdate = document.querySelector('#image');
 var $titleInput = document.querySelector('#entry-title');
@@ -26,23 +24,14 @@ function saveEntry(event) {
     title: $titleInput.value,
     notes: $notesInput.value,
     photoUrl: $photoInput.value,
-    id: nextEntryId
+    id: data.nextEntryId
   };
-  nextEntryId++;
+  data.nextEntryId++;
 
-  var entryBase = [];
-  var entryJSON = localStorage.getItem('journal-entries');
-  if (entryJSON !== null) {
-    entryBase = JSON.parse(entryJSON);
-  }
+  data.entries.unshift(newEntry);
 
-  entryBase.push(newEntry);
-
-  var newEntryJSON = JSON.stringify(entryBase);
+  var newEntryJSON = JSON.stringify(data);
   localStorage.setItem('journal-entries', newEntryJSON);
 
-  $photoUpdate.src = 'images/placeholder-image-square.jpg';
-  $titleInput.value = '';
-  $notesInput.value = '';
-  $photoInput.value = '';
+  $submit.reset();
 }

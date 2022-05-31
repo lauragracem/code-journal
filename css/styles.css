@@ -21,6 +21,13 @@ h3 {
   font-family: "Open sans", sans-serif;
 }
 
-textarea {
+textarea,
+input {
   font-family: "Open sans", sans-serif;
+  font-size: large;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgb(92, 48, 137);
 }
