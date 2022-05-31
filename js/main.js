@@ -19,7 +19,6 @@ $submit.addEventListener('submit', saveEntry);
 
 function saveEntry(event) {
   event.preventDefault();
-
   var newEntry = {
     title: $titleInput.value,
     notes: $notesInput.value,
@@ -29,9 +28,6 @@ function saveEntry(event) {
   data.nextEntryId++;
 
   data.entries.unshift(newEntry);
-
-  var newEntryJSON = JSON.stringify(data);
-  localStorage.setItem('journal-entries', newEntryJSON);
 
   $submit.reset();
 }
