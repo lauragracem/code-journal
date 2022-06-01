@@ -77,12 +77,16 @@ textarea {
 
 .button {
   margin-top: 1.5rem;
-  margin-left: 17.4rem;
+  margin-left: 16.7rem;
   margin-bottom: 2rem;
 }
 
 .column-full > h3 {
   margin-top: 1.5rem;
+}
+
+.entries > ul {
+  padding-left: 0;
 }
 
 /* small screen */
@@ -117,12 +121,37 @@ textarea {
 
   .button {
     margin-top: 1.5rem;
-    margin-left: 29rem;
+    margin-left: 28.35rem;
     margin-bottom: 2rem;
   }
 
   .column-full > h3 {
     margin-top: 1.5rem;
+  }
+
+  .sibling-header {
+    display: flex;
+  }
+
+  .sibling-header > p {
+    margin-left: 2rem;
+  }
+
+  .entries-header {
+    display: flex;
+    margin-top: 1.5rem;
+  }
+
+  .entries-header > h1 {
+    margin-top: 0.5rem;
+  }
+
+  .entries-header > input {
+    margin-top: 0.5rem;
+    margin-left: 19.7rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -138,11 +167,14 @@ textarea {
 
   .two-rows {
     margin-left: 1.2rem;
-    margin-top: 0;
   }
 
   .two-rows > input {
     width: 24rem;
+  }
+
+  .title {
+    margin-top: 0;
   }
 
   .column-full > textarea {
@@ -152,6 +184,30 @@ textarea {
 
   .column-full > .button {
     margin-top: 1.5rem;
-    margin-left: 47.7rem;
+    margin-left: 47rem;
+  }
+
+  .entries-header {
+    display: flex;
+  }
+
+  .entries-header > input {
+    margin-top: 0;
+    margin-left: 40.2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .entries > ul > li {
+    display: flex;
+  }
+
+  .entries > ul > li > img {
+    max-width: 425px;
+    max-height: 425px;
+  }
+
+  .two-rows > h2 {
+    margin-top: 0;
   }
 }

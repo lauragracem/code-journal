@@ -17,7 +17,7 @@ h3 {
   background-color: rgb(92, 48, 137);
   color: white;
   padding: 0.3rem 1rem;
-  border-radius: 8%;
+  border-radius: 0.3rem;
   border-style: none;
   font-family: "Open sans", sans-serif;
 }
@@ -40,4 +40,8 @@ textarea:focus-visible {
 
 .entries > ul {
   list-style: none;
+}
+
+.entries > ul > li {
+  margin-bottom: 4rem;
 }
