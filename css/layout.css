@@ -90,8 +90,7 @@ header {
   }
 
   .sibling-header > p {
-    margin-top: 1.68rem;
-    margin-left: 2rem;
+    margin-left: 0.5rem;
   }
 
   .entries > ul {
@@ -106,7 +105,7 @@ header {
     margin-top: 1rem;
   }
 
-  .entries-header > input {
+  .entries-header > ul > li > a {
     margin-top: 1.5rem;
     margin-left: 9.4rem;
     padding-top: 0.4rem;
@@ -160,6 +159,7 @@ header {
 
   .sibling-header > p {
     margin-left: 2rem;
+    margin-top: 1.7rem;
   }
 
   .entries-header {
@@ -171,11 +171,14 @@ header {
     margin-top: 0.5rem;
   }
 
-  .entries-header > input {
+  .entries-header > ul > li > a {
     margin-top: 0.5rem;
-    margin-left: 19.7rem;
+    margin-left: 17.2rem;
     padding-top: 0.5rem;
+    padding-left: 1rem;
     padding-bottom: 0.5rem;
+    padding-right: 1rem;
+    border-radius: 0.3rem;
   }
 }
 
@@ -215,9 +218,9 @@ header {
     display: flex;
   }
 
-  .entries-header > input {
+  .entries-header > ul > li > a {
     margin-top: 0;
-    margin-left: 40rem;
+    margin-left: 37.5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }

@@ -32,18 +32,10 @@ function saveEntry(event) {
   $submit.reset();
 }
 
-var entryIndex = [
-  {
-    title: 'Dummy Entry',
-    description: 'This is a random entry for testing purposes only.',
-    imageURL: 'images/placeholder-image-square.jpg'
-  }
-];
-
 function createEntry(entry) {
   var $entryList = document.createElement('li');
   var $image = document.createElement('img');
-  $image.setAttribute('src', entry.imageURL);
+  $image.setAttribute('src', entry.photoUrl);
   $entryList.appendChild($image);
   var $twoRows = document.createElement('div');
   $twoRows.setAttribute('class', 'two-rows');
@@ -52,14 +44,14 @@ function createEntry(entry) {
   $h2.textContent = entry.title;
   $twoRows.appendChild($h2);
   var $paragraph = document.createElement('p');
-  $paragraph.textContent = entry.description;
+  $paragraph.textContent = entry.notes;
   $twoRows.appendChild($paragraph);
   return $entryList;
 }
 
 var $entries = document.querySelector('#journal-entries');
-for (var i = 0; i < entryIndex.length; i++) {
-  var entry = entryIndex[i];
+for (var i = 0; i < data.entries.length; i++) {
+  var entry = data.entries[i];
   var journalEntry = createEntry(entry);
   $entries.appendChild(journalEntry);
 }

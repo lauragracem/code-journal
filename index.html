@@ -20,13 +20,18 @@
 </head>
 <body>
   <header>
-    <div class="container">
-      <h3>Code Journal</h3>
-    </div>
+    <nav>
+      <div class="container">
+        <h3>Code Journal</h3>
+      </div>
+      <!-- <ul>
+        <li><a href="#entries">Entries</a></li>
+      </ul> -->
+    </nav>
   </header>
   <main>
     <div class="container">
-      <div class="journal-entry" data-view="entry-form">
+      <div class="journal-entry" data-view="entry-form" id="entry-form">
         <div class="row">
           <div class="column-full">
             <h1>New Entry</h1>
@@ -53,7 +58,7 @@
           </div>
         </form>
       </div>
-      <div class="entries" data-view="entries">
+      <div class="entries" data-view="entries" id="entries">
         <header>
           <div class="sibling-header container">
             <h3>Code Journal</h3>
@@ -62,7 +67,10 @@
         </header>
         <div class="entries-header">
           <h1>Entries</h1>
-          <input class="button" type="submit" value="NEW">
+          <ul>
+            <li><a href="#entry-form">NEW</a></li>
+          </ul>
+          <!-- <input class="button" type="submit" value="NEW"> -->
         </div>
         <ul id="journal-entries">
         </ul>
