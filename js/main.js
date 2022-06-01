@@ -29,6 +29,8 @@ function saveEntry(event) {
 
   data.entries.unshift(newEntry);
 
+  renderList(data.entries);
+
   $submit.reset();
 }
 
@@ -49,9 +51,14 @@ function createEntry(entry) {
   return $entryList;
 }
 
-var $entries = document.querySelector('#journal-entries');
-for (var i = 0; i < data.entries.length; i++) {
-  var entry = data.entries[i];
-  var journalEntry = createEntry(entry);
-  $entries.appendChild(journalEntry);
+function renderList(list) {
+  var $entries = document.querySelector('#journal-entries');
+  $entries.innerHTML = '';
+  for (var i = 0; i < list.length; i++) {
+    var entry = list[i];
+    var journalEntry = createEntry(entry);
+    $entries.appendChild(journalEntry);
+  }
 }
+
+renderList(data.entries);
