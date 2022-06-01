@@ -33,6 +33,18 @@ textarea:focus-visible {
   outline: 2px solid rgb(92, 48, 137);
 }
 
+.sibling-header > h3 {
+  font-size: 1.5rem;
+}
+
+.sibling-header > p {
+  font-size: 1.2rem;
+}
+
+.entries-header > input {
+  font-size: 1rem;
+}
+
 .entries {
   font-family: "Open sans", sans-serif;
   font-size: large;
@@ -44,4 +56,16 @@ textarea:focus-visible {
 
 .entries > ul > li {
   margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 625px) {
+  .entries-header > input {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .entries-header > input {
+    font-size: 1.6rem;
+  }
 }
