@@ -8,6 +8,7 @@ header {
 }
 
 h1,
+h2,
 h3 {
   font-family: "Proza Libre", sans-serif;
 }
@@ -30,4 +31,13 @@ input {
 input:focus-visible,
 textarea:focus-visible {
   outline: 2px solid rgb(92, 48, 137);
+}
+
+.entries {
+  font-family: "Open sans", sans-serif;
+  font-size: large;
+}
+
+.entries > ul {
+  list-style: none;
 }
