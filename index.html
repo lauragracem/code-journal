@@ -11,14 +11,49 @@
     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header>
+    <div class="container">
+      <h3>Code Journal</h3>
+    </div>
   </header>
   <main>
+    <div class="container">
+      <div class="journal-entry" data-view="entry-form">
+        <div class="row">
+          <div class="column-full">
+            <h1>New Entry</h1>
+          </div>
+        </div>
+        <form id="form">
+          <div class="row">
+            <div class="column-half">
+              <img id="image" src="images/placeholder-image-square.jpg">
+              <div class="two-rows">
+                <h3>Title</h3>
+                <input type="text" id="entry-title" name="title" required>
+                <h3 class="photo-url">Photo URL</h3>
+                <input type="text" id="entry-photo" name="photo" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column-full">
+              <h3>Notes</h3>
+              <textarea id="notes" name="notes" required></textarea>
+              <input class="button" type="submit" value="SAVE" >
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>

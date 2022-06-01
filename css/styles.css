@@ -1,0 +1,33 @@
+body {
+  background-color: rgb(240, 240, 240);
+}
+
+header {
+  background-color: rgb(92, 48, 137);
+  color: white;
+}
+
+h1,
+h3 {
+  font-family: "Proza Libre", sans-serif;
+}
+
+.button {
+  background-color: rgb(92, 48, 137);
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 8%;
+  border-style: none;
+  font-family: "Open sans", sans-serif;
+}
+
+textarea,
+input {
+  font-family: "Open sans", sans-serif;
+  font-size: large;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgb(92, 48, 137);
+}
