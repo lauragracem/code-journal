@@ -32,6 +32,8 @@ function saveEntry(event) {
   renderList(data.entries);
 
   $submit.reset();
+  var $image = document.querySelector('#image');
+  $image.src = 'images/placeholder-image-square.jpg';
 }
 
 function createEntry(entry) {
