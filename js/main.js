@@ -47,6 +47,9 @@ function createEntry(entry) {
   var $h2 = document.createElement('h2');
   $h2.textContent = entry.title;
   $twoRows.appendChild($h2);
+  var $edit = document.createElement('i');
+  $edit.setAttribute('class', 'fas fa-pen');
+  $twoRows.appendChild($edit);
   var $paragraph = document.createElement('p');
   $paragraph.textContent = entry.notes;
   $twoRows.appendChild($paragraph);

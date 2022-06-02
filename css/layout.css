@@ -82,7 +82,7 @@ header {
   }
 
   .column-full > h3 {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
   }
 
   .sibling-header {
@@ -107,9 +107,20 @@ header {
 
   .entries-header > ul > li > a {
     margin-top: 1.5rem;
-    margin-left: 9.4rem;
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
+    margin-left: 8.2rem;
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+  }
+
+  .two-rows {
+    position: relative;
+  }
+
+  .two-rows > i {
+    position: absolute;
+    margin-left: 19rem;
+    margin-top: -3.8rem;
+    font-size: 30px;
   }
 }
 
@@ -180,6 +191,17 @@ header {
     padding-right: 1rem;
     border-radius: 0.3rem;
   }
+
+  .two-rows {
+    position: relative;
+  }
+
+  .two-rows > i {
+    position: absolute;
+    margin-left: 31rem;
+    margin-top: -3.8rem;
+    font-size: 30px;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -194,6 +216,7 @@ header {
 
   .two-rows {
     margin-left: 1.2rem;
+    position: relative;
   }
 
   .two-rows > input {
@@ -236,5 +259,12 @@ header {
 
   .two-rows > h2 {
     margin-top: 0;
+  }
+
+  .two-rows > i {
+    position: absolute;
+    margin-left: 23.3rem;
+    margin-top: -3.8rem;
+    font-size: 30px;
   }
 }
