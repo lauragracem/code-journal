@@ -4,8 +4,14 @@ var $titleInput = document.querySelector('#entry-title');
 var $notesInput = document.querySelector('#notes');
 var $entries = document.querySelector('#journal-entries');
 
+var $editTitle = document.querySelector('#edit-title');
+var $editPhoto = document.querySelector('#edit-photo');
+var $editImage = document.querySelector('#edit-image');
+var $editNotes = document.querySelector('#edit-notes');
+
 $photoInput.addEventListener('input', updatePhoto);
 $entries.addEventListener('click', editClick);
+$editPhoto.addEventListener('input', updateEditPhoto);
 
 function editClick(event) {
   var target = event.target;
@@ -16,6 +22,18 @@ function editClick(event) {
       return element.id === id;
     });
     data.editing = found;
+    $editTitle.value = data.editing.title;
+    $editPhoto.value = data.editing.photoUrl;
+    $editImage.src = data.editing.photoUrl;
+    $editNotes.value = data.editing.notes;
+  }
+}
+
+function updateEditPhoto(event) {
+  if ($editPhoto.value) {
+    $editImage.src = $editPhoto.value;
+  } else {
+    $editImage.src = 'images/placeholder-image-square.jpg';
   }
 }
 
