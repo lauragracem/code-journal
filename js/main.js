@@ -29,5 +29,38 @@ function saveEntry(event) {
 
   data.entries.unshift(newEntry);
 
+  renderList(data.entries);
+
   $submit.reset();
+  var $image = document.querySelector('#image');
+  $image.src = 'images/placeholder-image-square.jpg';
 }
+
+function createEntry(entry) {
+  var $entryList = document.createElement('li');
+  var $image = document.createElement('img');
+  $image.setAttribute('src', entry.photoUrl);
+  $entryList.appendChild($image);
+  var $twoRows = document.createElement('div');
+  $twoRows.setAttribute('class', 'two-rows');
+  $entryList.appendChild($twoRows);
+  var $h2 = document.createElement('h2');
+  $h2.textContent = entry.title;
+  $twoRows.appendChild($h2);
+  var $paragraph = document.createElement('p');
+  $paragraph.textContent = entry.notes;
+  $twoRows.appendChild($paragraph);
+  return $entryList;
+}
+
+function renderList(list) {
+  var $entries = document.querySelector('#journal-entries');
+  $entries.innerHTML = '';
+  for (var i = 0; i < list.length; i++) {
+    var entry = list[i];
+    var journalEntry = createEntry(entry);
+    $entries.appendChild(journalEntry);
+  }
+}
+
+renderList(data.entries);
