@@ -46,8 +46,10 @@ function updatePhoto(event) {
 }
 
 var $submit = document.querySelector('#form');
+var $editSubmit = document.querySelector('#edit-form');
 
 $submit.addEventListener('submit', saveEntry);
+$editSubmit.addEventListener('submit', editSaveEntry);
 
 function saveEntry(event) {
   event.preventDefault();
@@ -64,8 +66,29 @@ function saveEntry(event) {
   renderList(data.entries);
 
   $submit.reset();
+  $editImage.src = 'images/placeholder-image-square.jpg';
+}
+
+function editSaveEntry(event) {
+  event.preventDefault();
+  var editEntry = {
+    title: $editTitle.value,
+    notes: $editNotes.value,
+    photoUrl: $editPhoto.value,
+    id: data.editing.id
+  };
+
+  var findIndex = data.entries.findIndex(function (element) {
+    return element.id === data.editing.id;
+  });
+  data.entries[findIndex] = editEntry;
+
+  renderList(data.entries);
+
+  $editSubmit.reset();
   var $image = document.querySelector('#image');
   $image.src = 'images/placeholder-image-square.jpg';
+
 }
 
 function createEntry(entry) {
