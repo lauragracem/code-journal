@@ -2,8 +2,22 @@ var $photoInput = document.querySelector('#entry-photo');
 var $photoUpdate = document.querySelector('#image');
 var $titleInput = document.querySelector('#entry-title');
 var $notesInput = document.querySelector('#notes');
+var $entries = document.querySelector('#journal-entries');
 
 $photoInput.addEventListener('input', updatePhoto);
+$entries.addEventListener('click', editClick);
+
+function editClick(event) {
+  var target = event.target;
+  if (target.closest('a')) {
+    var parent = target.closest('li');
+    var id = Number(parent.getAttribute('data-entry-id'));
+    var found = data.entries.find(function (element) {
+      return element.id === id;
+    });
+    data.editing = found;
+  }
+}
 
 function updatePhoto(event) {
   if ($photoInput.value) {
@@ -38,15 +52,14 @@ function saveEntry(event) {
 
 function createEntry(entry) {
   var $entryList = document.createElement('li');
+  $entryList.setAttribute('data-entry-id', entry.id);
   var $image = document.createElement('img');
   $image.setAttribute('src', entry.photoUrl);
-  $image.setAttribute('contenteditable', 'true');
   $entryList.appendChild($image);
   var $twoRows = document.createElement('div');
   $twoRows.setAttribute('class', 'two-rows');
   $entryList.appendChild($twoRows);
   var $h2 = document.createElement('h2');
-  $h2.setAttribute('contenteditable', 'true');
   $h2.textContent = entry.title;
   $twoRows.appendChild($h2);
   var $anchor = document.createElement('a');
@@ -57,16 +70,16 @@ function createEntry(entry) {
   $anchor.appendChild($span);
   var $edit = document.createElement('i');
   $edit.setAttribute('class', 'fas fa-pen');
+  $edit.setAttribute('id', 'icon');
   $span.appendChild($edit);
   var $paragraph = document.createElement('p');
-  $paragraph.setAttribute('contenteditable', 'true');
   $paragraph.textContent = entry.notes;
   $twoRows.appendChild($paragraph);
   return $entryList;
 }
 
 function renderList(list) {
-  var $entries = document.querySelector('#journal-entries');
+
   $entries.innerHTML = '';
   for (var i = 0; i < list.length; i++) {
     var entry = list[i];

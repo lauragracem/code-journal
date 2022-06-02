@@ -79,6 +79,26 @@
         <div class="entries-header">
           <h1>Edit Entry</h1>
         </div>
+        <form>
+          <div class="row">
+            <div class="column-half">
+              <img id="edit-image" src="images/placeholder-image-square.jpg">
+              <div class="two-rows">
+                <h3 class="title">Title</h3>
+                <input type="text" id="edit-title" name="title" required>
+                <h3 class="photo-url">Photo URL</h3>
+                <input type="text" id="edit-photo" name="photo" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column-full">
+              <h3>Notes</h3>
+              <textarea id="edit-notes" name="notes" required></textarea>
+              <input class="button edit-button" type="submit" onclick="window.location.href='#entries'" value="SAVE" />
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </main>
