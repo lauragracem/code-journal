@@ -116,7 +116,7 @@ header {
     position: relative;
   }
 
-  .two-rows > i {
+  .two-rows > a > span > i {
     position: absolute;
     margin-left: 19rem;
     margin-top: -3.8rem;
@@ -196,7 +196,7 @@ header {
     position: relative;
   }
 
-  .two-rows > i {
+  .two-rows > a > span > i {
     position: absolute;
     margin-left: 31rem;
     margin-top: -3.8rem;
@@ -261,9 +261,9 @@ header {
     margin-top: 0;
   }
 
-  .two-rows > i {
+  .two-rows > a > span > i {
     position: absolute;
-    margin-left: 23.3rem;
+    margin-left: 23.4rem;
     margin-top: -3.8rem;
     font-size: 30px;
   }

@@ -49,6 +49,7 @@ nav > ul > li > a {
 }
 
 .sibling-header > p {
+  font-family: "Open sans", sans-serif;
   font-size: 1.4rem;
   color: white;
 }
