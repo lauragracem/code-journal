@@ -3,6 +3,7 @@ var $photoUpdate = document.querySelector('#image');
 var $titleInput = document.querySelector('#entry-title');
 var $notesInput = document.querySelector('#notes');
 var $entries = document.querySelector('#journal-entries');
+var $new = document.querySelector('#new');
 
 var $editTitle = document.querySelector('#edit-title');
 var $editPhoto = document.querySelector('#edit-photo');
@@ -12,6 +13,7 @@ var $editNotes = document.querySelector('#edit-notes');
 $photoInput.addEventListener('input', updatePhoto);
 $entries.addEventListener('click', editClick);
 $editPhoto.addEventListener('input', updateEditPhoto);
+$new.addEventListener('click', function () { switchView('journal-entry'); });
 
 function editClick(event) {
   var target = event.target;
@@ -27,6 +29,7 @@ function editClick(event) {
     $editImage.src = data.editing.photoUrl;
     $editNotes.value = data.editing.notes;
   }
+  switchView('edit-entries');
 }
 
 function updateEditPhoto(event) {
@@ -67,6 +70,8 @@ function saveEntry(event) {
 
   $submit.reset();
   $editImage.src = 'images/placeholder-image-square.jpg';
+
+  switchView('entries');
 }
 
 function editSaveEntry(event) {
@@ -89,6 +94,7 @@ function editSaveEntry(event) {
   var $image = document.querySelector('#image');
   $image.src = 'images/placeholder-image-square.jpg';
 
+  switchView('entries');
 }
 
 function createEntry(entry) {
@@ -130,3 +136,30 @@ function renderList(list) {
 }
 
 renderList(data.entries);
+
+var $entryForm = document.querySelector('.journal-entry');
+var $entriesEntry = document.querySelector('.entries');
+var $editEntries = document.querySelector('.edit-entries');
+
+function switchView(view) {
+  if (view === 'journal-entry') {
+    $entryForm.classList.remove('hidden');
+  } else {
+    $entryForm.classList.add('hidden');
+  }
+  if (view === 'entries') {
+    $entriesEntry.classList.remove('hidden');
+  } else {
+    $entriesEntry.classList.add('hidden');
+  }
+  if (view === 'edit-entries') {
+    $editEntries.classList.remove('hidden');
+  } else {
+    $editEntries.classList.add('hidden');
+  }
+
+}
+
+window.addEventListener('DOMContentLoaded', event => {
+  switchView('entries');
+});
