@@ -11,7 +11,6 @@ var $entriesEntry = document.querySelector('.entries');
 var $header = document.querySelector('.header');
 
 var $submit = document.querySelector('#form');
-var $editSubmit = document.querySelector('#edit-form');
 
 $photoInput.addEventListener('input', updatePhoto);
 $entries.addEventListener('click', editClick);
@@ -78,8 +77,7 @@ function saveEntry() {
   switchView('entries');
 }
 
-function editSaveEntry(event) {
-  event.preventDefault();
+function editSaveEntry() {
   var editEntry = {
     title: $titleInput.value,
     notes: $notesInput.value,
@@ -94,10 +92,9 @@ function editSaveEntry(event) {
 
   renderList(data.entries);
 
-  $editSubmit.reset();
+  $submit.reset();
   var $image = document.querySelector('#image');
   $image.src = 'images/placeholder-image-square.jpg';
-  // reset data.editing field
   data.editing = null;
   switchView('entries');
 }
