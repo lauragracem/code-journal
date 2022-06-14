@@ -103,23 +103,18 @@ nav > ul > li > a {
 .background {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0);
-  opacity: 0.3;
-  visibility: hidden;
-}
-
-.background.unhidden {
+  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0);
-  opacity: 0.7;
-  visibility: visible;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  visibility: hidden;
   z-index: 1;
+}
+
+.background.unhidden {
+  visibility: visible;
 }
 
 .pop-up {
@@ -134,7 +129,7 @@ nav > ul > li > a {
 /* .cancel {
   margin-right: 6rem;
   color: black;
-  background-color: gray;
+  background-color:  gray;
   padding: 0.5rem;
   border-radius: 0.5rem;
   border: none;
