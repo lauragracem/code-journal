@@ -82,7 +82,7 @@ header {
   }
 
   .column-full > h3 {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
   }
 
   .sibling-header {
@@ -105,11 +105,22 @@ header {
     margin-top: 1rem;
   }
 
-  .entries-header > ul > li > a {
-    margin-top: 1.5rem;
-    margin-left: 9.4rem;
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
+  .entries-header > ul > li > input {
+    margin-top: 0;
+    margin-left: 7.9rem;
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+  }
+
+  .two-rows {
+    position: relative;
+  }
+
+  .two-rows > a > span > i {
+    position: absolute;
+    margin-left: 19rem;
+    margin-top: -3.8rem;
+    font-size: 30px;
   }
 }
 
@@ -171,18 +182,36 @@ header {
     margin-top: 0.5rem;
   }
 
-  .entries-header > ul > li > a {
-    margin-top: 0.5rem;
-    margin-left: 17.2rem;
+  .entries-header > ul > li > input {
+    margin-top: -0.5rem;
+    margin-left: 16.5rem;
     padding-top: 0.5rem;
     padding-left: 1rem;
     padding-bottom: 0.5rem;
     padding-right: 1rem;
     border-radius: 0.3rem;
+    font-size: 30px;
+  }
+
+  .two-rows {
+    position: relative;
+  }
+
+  .two-rows > a > span > i {
+    position: absolute;
+    margin-left: 31rem;
+    margin-top: -3.8rem;
+    font-size: 30px;
   }
 }
 
 @media screen and (min-width: 800px) {
+  h4 {
+    position: absolute;
+    margin-left: 13rem;
+    margin-top: -2.65rem;
+  }
+
   .column-half {
     display: flex;
   }
@@ -194,6 +223,7 @@ header {
 
   .two-rows {
     margin-left: 1.2rem;
+    position: relative;
   }
 
   .two-rows > input {
@@ -218,11 +248,12 @@ header {
     display: flex;
   }
 
-  .entries-header > ul > li > a {
+  .entries-header > ul > li > input {
     margin-top: 0;
-    margin-left: 37.5rem;
+    margin-left: 36.9rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    font-size: 30px;
   }
 
   .entries > ul > li {
@@ -236,5 +267,12 @@ header {
 
   .two-rows > h2 {
     margin-top: 0;
+  }
+
+  .two-rows > a > span > i {
+    position: absolute;
+    margin-left: 23.4rem;
+    margin-top: -3.8rem;
+    font-size: 30px;
   }
 }

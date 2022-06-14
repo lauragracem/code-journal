@@ -22,11 +22,12 @@
   <header>
     <div class="container">
       <h3>Code Journal</h3>
+      <h4 class="header">Entries</h4>
     </div>
   </header>
   <main>
     <div class="container">
-      <div class="journal-entry" data-view="entry-form" id="entry-form">
+      <div class="journal-entry hidden" data-view="entry-form" id="entry-form">
         <div class="row">
           <div class="column-full">
             <h1>New Entry</h1>
@@ -53,17 +54,11 @@
           </div>
         </form>
       </div>
-      <div class="entries" data-view="entries" id="entries">
-        <header>
-          <div class="sibling-header container">
-            <h3>Code Journal</h3>
-            <p>Entries</p>
-          </div>
-        </header>
+      <div class="entries hidden" data-view="entries hidden" id="entries">
         <div class="entries-header">
           <h1>Entries</h1>
           <ul>
-            <li><a href="#entry-form">NEW</a></li>
+            <li><input class="button" type="button" id="new" value="NEW"></li>
           </ul>
         </div>
         <ul id="journal-entries">

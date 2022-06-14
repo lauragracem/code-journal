@@ -9,7 +9,8 @@ header {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: "Proza Libre", sans-serif;
 }
 
@@ -49,6 +50,7 @@ nav > ul > li > a {
 }
 
 .sibling-header > p {
+  font-family: "Open sans", sans-serif;
   font-size: 1.4rem;
   color: white;
 }
@@ -75,6 +77,10 @@ nav > ul > li > a {
 
 .entries > ul > li {
   margin-bottom: 4rem;
+}
+
+.edit-entries.hidden {
+  visibility: hidden;
 }
 
 @media screen and (min-width: 625px) {
