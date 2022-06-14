@@ -123,13 +123,7 @@ nav > ul > li > a {
 }
 
 .pop-up {
-  position: absolute;
-  text-align: center;
   background-color: white;
-  margin-top: 20rem;
-  margin-left: 8.5rem;
-  padding: 2rem 3rem;
-  border-radius: 0.5rem;
 }
 
 .cancel,
@@ -137,10 +131,22 @@ nav > ul > li > a {
   margin-top: 2rem;
 }
 
-.cancel {
+/* .cancel {
   margin-right: 6rem;
+  color: black;
+  background-color: gray;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: large;
 }
 
 .confirm {
   margin-left: 6rem;
-}
+  color: white;
+  background-color: red;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: large;
+} */

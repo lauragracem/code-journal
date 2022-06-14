@@ -128,10 +128,39 @@ header {
     margin-top: -3.8rem;
     font-size: 30px;
   }
-}
 
-#delete {
-  margin-top: -3.5rem;
+  #delete {
+    margin-top: -3.5rem;
+  }
+
+  .pop-up {
+    text-align: center;
+    margin-top: 12rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    padding: 0.5rem;
+  }
+
+  .cancel {
+    margin-right: 0;
+    margin-left: 2rem;
+    color: black;
+    background-color: gray;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: large;
+  }
+
+  .confirm {
+    margin-left: 6rem;
+    color: white;
+    background-color: red;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: large;
+  }
 }
 
 /* small screen */
@@ -222,6 +251,35 @@ header {
 
   #delete {
     margin-top: -3.5rem;
+  }
+
+  .pop-up {
+    position: absolute;
+    text-align: center;
+    margin-top: 20rem;
+    margin-left: 8.6rem;
+    padding: 2rem 3rem;
+    border-radius: 0.5rem;
+  }
+
+  .cancel {
+    margin-right: 6rem;
+    color: black;
+    background-color: gray;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: large;
+  }
+
+  .confirm {
+    margin-left: 6rem;
+    color: white;
+    background-color: red;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: large;
   }
 }
 
