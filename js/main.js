@@ -140,6 +140,16 @@ function renderList(list) {
 
 renderList(data.entries);
 
+// $delete.addEventListener('click', deleteEntry);
+
+// function deleteEntry(event) {
+//   if ('Delete Entry' === 'click') {
+//     delete entry.id;
+//     delete entry.photoUrl;
+//     delete entry.notes;
+//   }
+// }
+
 function switchView(view) {
   if (view === 'journal-entry') {
     $entryForm.classList.remove('hidden');
