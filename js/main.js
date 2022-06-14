@@ -9,8 +9,9 @@ var $entryForm = document.querySelector('.journal-entry');
 var $formHeader = document.querySelector('.journal-entry h1');
 var $entriesEntry = document.querySelector('.entries');
 var $header = document.querySelector('.header');
-var $delete = document.querySelector('.delete');
+var $openModal = document.querySelector('.open-modal');
 var $background = document.querySelector('.background');
+var $cancel = document.querySelector('.cancel');
 
 var $submit = document.querySelector('#form');
 
@@ -141,16 +142,15 @@ function renderList(list) {
 
 renderList(data.entries);
 
-$delete.addEventListener('click', deleteEntry);
-var click = 0;
+$openModal.addEventListener('click', deleteEntry);
+$cancel.addEventListener('click', cancelDelete);
 
 function deleteEntry(event) {
-  click++;
-  if (click % 2 !== 0) {
-    $background.className = 'background unhidden';
-  } else if (click % 2 === 0) {
-    $background.className = 'background';
-  }
+  $background.className = 'background unhidden';
+}
+
+function cancelDelete(event) {
+  $background.className = 'background';
 }
 
 function switchView(view) {
@@ -161,7 +161,7 @@ function switchView(view) {
       $formHeader.textContent = 'Edit Entry';
     } else {
       $formHeader.textContent = 'New Entry';
-      $delete.className = 'delete hidden';
+      $openModal.className = 'delete hidden';
     }
   } else {
     $entryForm.classList.add('hidden');
