@@ -206,6 +206,12 @@ header {
 }
 
 @media screen and (min-width: 800px) {
+  h4 {
+    position: absolute;
+    margin-left: 13rem;
+    margin-top: -2.65rem;
+  }
+
   .column-half {
     display: flex;
   }

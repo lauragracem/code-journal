@@ -5,15 +5,20 @@ var $notesInput = document.querySelector('#notes');
 var $entries = document.querySelector('#journal-entries');
 var $new = document.querySelector('#new');
 
-var $editTitle = document.querySelector('#edit-title');
-var $editPhoto = document.querySelector('#edit-photo');
-var $editImage = document.querySelector('#edit-image');
-var $editNotes = document.querySelector('#edit-notes');
+var $entryForm = document.querySelector('.journal-entry');
+var $formHeader = document.querySelector('.journal-entry h1');
+var $entriesEntry = document.querySelector('.entries');
+var $header = document.querySelector('.header');
+
+var $submit = document.querySelector('#form');
+var $editSubmit = document.querySelector('#edit-form');
 
 $photoInput.addEventListener('input', updatePhoto);
 $entries.addEventListener('click', editClick);
-$editPhoto.addEventListener('input', updateEditPhoto);
-$new.addEventListener('click', function () { switchView('journal-entry'); });
+$new.addEventListener('click', function () {
+  data.editing = null;
+  switchView('journal-entry');
+});
 
 function editClick(event) {
   var target = event.target;
@@ -24,20 +29,15 @@ function editClick(event) {
       return element.id === id;
     });
     data.editing = found;
-    $editTitle.value = data.editing.title;
-    $editPhoto.value = data.editing.photoUrl;
-    $editImage.src = data.editing.photoUrl;
-    $editNotes.value = data.editing.notes;
-  }
-  switchView('edit-entries');
-}
 
-function updateEditPhoto(event) {
-  if ($editPhoto.value) {
-    $editImage.src = $editPhoto.value;
-  } else {
-    $editImage.src = 'images/placeholder-image-square.jpg';
+    // change this to fill in the regular form
+    $titleInput.value = data.editing.title;
+    $photoInput.value = data.editing.photoUrl;
+    $photoUpdate.src = data.editing.photoUrl;
+    $notesInput.value = data.editing.notes;
   }
+  // switch view to regular form
+  switchView('journal-entry');
 }
 
 function updatePhoto(event) {
@@ -48,14 +48,21 @@ function updatePhoto(event) {
   }
 }
 
-var $submit = document.querySelector('#form');
-var $editSubmit = document.querySelector('#edit-form');
+$submit.addEventListener('submit', submitForm);
 
-$submit.addEventListener('submit', saveEntry);
-$editSubmit.addEventListener('submit', editSaveEntry);
+// create a function that will use either crete new or save edit
+function submitForm(e) {
+  e.preventDefault();
 
-function saveEntry(event) {
-  event.preventDefault();
+  if (data.editing) {
+    editSaveEntry();
+  } else {
+    saveEntry();
+  }
+}
+
+// remove event from parms
+function saveEntry() {
   var newEntry = {
     title: $titleInput.value,
     notes: $notesInput.value,
@@ -69,7 +76,7 @@ function saveEntry(event) {
   renderList(data.entries);
 
   $submit.reset();
-  $editImage.src = 'images/placeholder-image-square.jpg';
+  $photoUpdate.src = 'images/placeholder-image-square.jpg';
 
   switchView('entries');
 }
@@ -77,9 +84,9 @@ function saveEntry(event) {
 function editSaveEntry(event) {
   event.preventDefault();
   var editEntry = {
-    title: $editTitle.value,
-    notes: $editNotes.value,
-    photoUrl: $editPhoto.value,
+    title: $titleInput.value,
+    notes: $notesInput.value,
+    photoUrl: $photoInput.value,
     id: data.editing.id
   };
 
@@ -93,7 +100,8 @@ function editSaveEntry(event) {
   $editSubmit.reset();
   var $image = document.querySelector('#image');
   $image.src = 'images/placeholder-image-square.jpg';
-
+  // reset data.editing field
+  data.editing = null;
   switchView('entries');
 }
 
@@ -137,25 +145,24 @@ function renderList(list) {
 
 renderList(data.entries);
 
-var $entryForm = document.querySelector('.journal-entry');
-var $entriesEntry = document.querySelector('.entries');
-var $editEntries = document.querySelector('.edit-entries');
-
 function switchView(view) {
+  // in here, show/hide proper header
   if (view === 'journal-entry') {
     $entryForm.classList.remove('hidden');
+    $header.classList.add('hidden');
+    if (data.editing) {
+      $formHeader.textContent = 'Edit Entry';
+    } else {
+      $formHeader.textContent = 'New Entry';
+    }
   } else {
     $entryForm.classList.add('hidden');
   }
+
   if (view === 'entries') {
     $entriesEntry.classList.remove('hidden');
   } else {
     $entriesEntry.classList.add('hidden');
-  }
-  if (view === 'edit-entries') {
-    $editEntries.classList.remove('hidden');
-  } else {
-    $editEntries.classList.add('hidden');
   }
 
 }
