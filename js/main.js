@@ -9,6 +9,7 @@ var $entryForm = document.querySelector('.journal-entry');
 var $formHeader = document.querySelector('.journal-entry h1');
 var $entriesEntry = document.querySelector('.entries');
 var $header = document.querySelector('.header');
+var $delete = document.querySelector('.delete');
 
 var $submit = document.querySelector('#form');
 
@@ -147,6 +148,7 @@ function switchView(view) {
       $formHeader.textContent = 'Edit Entry';
     } else {
       $formHeader.textContent = 'New Entry';
+      $delete.className = 'delete hidden';
     }
   } else {
     $entryForm.classList.add('hidden');
