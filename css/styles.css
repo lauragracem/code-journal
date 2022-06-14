@@ -83,6 +83,11 @@ nav > ul > li > a {
   visibility: hidden;
 }
 
+#delete {
+  color: red;
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 625px) {
   .entries-header > ul > li > a {
     font-size: 1.6rem;

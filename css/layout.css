@@ -130,6 +130,10 @@ header {
   }
 }
 
+#delete {
+  margin-top: -3.5rem;
+}
+
 /* small screen */
 @media screen and (min-width: 625px) {
   img {
@@ -215,6 +219,10 @@ header {
     margin-top: -3.8rem;
     font-size: 30px;
   }
+
+  #delete {
+    margin-top: -3.5rem;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -286,5 +294,9 @@ header {
     margin-left: 23.4rem;
     margin-top: -3.8rem;
     font-size: 30px;
+  }
+
+  #delete {
+    margin-top: -3.5rem;
   }
 }
