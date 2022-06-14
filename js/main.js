@@ -10,6 +10,7 @@ var $formHeader = document.querySelector('.journal-entry h1');
 var $entriesEntry = document.querySelector('.entries');
 var $header = document.querySelector('.header');
 var $delete = document.querySelector('.delete');
+var $background = document.querySelector('.background');
 
 var $submit = document.querySelector('#form');
 
@@ -140,15 +141,17 @@ function renderList(list) {
 
 renderList(data.entries);
 
-// $delete.addEventListener('click', deleteEntry);
+$delete.addEventListener('click', deleteEntry);
+var click = 0;
 
-// function deleteEntry(event) {
-//   if ('Delete Entry' === 'click') {
-//     delete entry.id;
-//     delete entry.photoUrl;
-//     delete entry.notes;
-//   }
-// }
+function deleteEntry(event) {
+  click++;
+  if (click % 2 !== 0) {
+    $background.className = 'background unhidden';
+  } else if (click % 2 === 0) {
+    $background.className = 'background';
+  }
+}
 
 function switchView(view) {
   if (view === 'journal-entry') {
