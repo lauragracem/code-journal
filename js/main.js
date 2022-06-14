@@ -30,13 +30,12 @@ function editClick(event) {
     });
     data.editing = found;
 
-    // change this to fill in the regular form
     $titleInput.value = data.editing.title;
     $photoInput.value = data.editing.photoUrl;
     $photoUpdate.src = data.editing.photoUrl;
     $notesInput.value = data.editing.notes;
   }
-  // switch view to regular form
+
   switchView('journal-entry');
 }
 
@@ -50,7 +49,6 @@ function updatePhoto(event) {
 
 $submit.addEventListener('submit', submitForm);
 
-// create a function that will use either crete new or save edit
 function submitForm(e) {
   e.preventDefault();
 
@@ -61,7 +59,6 @@ function submitForm(e) {
   }
 }
 
-// remove event from parms
 function saveEntry() {
   var newEntry = {
     title: $titleInput.value,
@@ -146,7 +143,6 @@ function renderList(list) {
 renderList(data.entries);
 
 function switchView(view) {
-  // in here, show/hide proper header
   if (view === 'journal-entry') {
     $entryForm.classList.remove('hidden');
     $header.classList.add('hidden');
