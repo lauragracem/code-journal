@@ -12,6 +12,7 @@ var $header = document.querySelector('.header');
 var $openModal = document.querySelector('.open-modal');
 var $background = document.querySelector('.background');
 var $cancel = document.querySelector('.cancel');
+var $confirm = document.querySelector('.confirm');
 
 var $submit = document.querySelector('#form');
 
@@ -142,14 +143,26 @@ function renderList(list) {
 
 renderList(data.entries);
 
-$openModal.addEventListener('click', deleteEntry);
+$openModal.addEventListener('click', openModal);
 $cancel.addEventListener('click', cancelDelete);
+$confirm.addEventListener('click', deleteEntry);
 
-function deleteEntry(event) {
+function openModal(event) {
   $background.className = 'background unhidden';
 }
 
 function cancelDelete(event) {
+  $background.className = 'background';
+}
+
+function deleteEntry(event) {
+  var newList = data.entries.filter(function (item) {
+    return item.id !== data.editing.id;
+  });
+  data.entries = newList;
+  data.editing = null;
+  renderList(newList);
+  switchView('entries');
   $background.className = 'background';
 }
 
