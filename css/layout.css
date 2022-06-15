@@ -66,6 +66,12 @@ header {
     margin-bottom: 0.4rem;
   }
 
+  h4 {
+    position: absolute;
+    margin-left: 13rem;
+    margin-top: -2.65rem;
+  }
+
   textarea {
     width: 21.3rem;
     height: 10rem;
@@ -122,6 +128,50 @@ header {
     margin-top: -3.8rem;
     font-size: 30px;
   }
+
+  #delete {
+    margin-top: -3.5rem;
+  }
+
+  .pop-up {
+    text-align: center;
+    margin-top: 12rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-top: 0.2rem;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0.5rem;
+  }
+
+  .pop-up > h3 {
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .cancel {
+    margin-top: 0;
+    margin-right: 1rem;
+    margin-left: 0;
+    margin-bottom: 1rem;
+    color: black;
+    background-color: gray;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: medium;
+  }
+
+  .confirm {
+    margin-left: 6.2rem;
+    color: white;
+    background-color: red;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: medium;
+  }
 }
 
 /* small screen */
@@ -143,6 +193,12 @@ header {
   h3 {
     margin-top: 1.5rem;
     margin-bottom: 0.4rem;
+  }
+
+  h4 {
+    position: absolute;
+    margin-left: 13rem;
+    margin-top: -2.65rem;
   }
 
   textarea {
@@ -202,6 +258,44 @@ header {
     margin-left: 31rem;
     margin-top: -3.8rem;
     font-size: 30px;
+  }
+
+  #delete {
+    margin-top: -3.5rem;
+  }
+
+  .pop-up {
+    position: absolute;
+    text-align: center;
+    margin-top: 20rem;
+    margin-left: 8rem;
+    margin-right: 5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .pop-up > h3 {
+    font-size: medium;
+  }
+
+  .cancel {
+    margin-right: 8.5rem;
+    color: black;
+    background-color: rgb(184, 179, 179);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: large;
+  }
+
+  .confirm {
+    margin-left: 0;
+    color: white;
+    background-color: red;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: large;
   }
 }
 
@@ -274,5 +368,42 @@ header {
     margin-left: 23.4rem;
     margin-top: -3.8rem;
     font-size: 30px;
+  }
+
+  #delete {
+    margin-top: -3.5rem;
+  }
+
+  .pop-up {
+    position: absolute;
+    text-align: center;
+    margin-top: 20rem;
+    margin-left: 40%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .pop-up > h3 {
+    font-size: medium;
+  }
+
+  .cancel {
+    margin-right: 8.5rem;
+    color: black;
+    background-color: rgb(184, 179, 179);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: large;
+  }
+
+  .confirm {
+    margin-left: 0;
+    color: white;
+    background-color: red;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: large;
   }
 }

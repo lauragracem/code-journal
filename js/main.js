@@ -9,6 +9,10 @@ var $entryForm = document.querySelector('.journal-entry');
 var $formHeader = document.querySelector('.journal-entry h1');
 var $entriesEntry = document.querySelector('.entries');
 var $header = document.querySelector('.header');
+var $openModal = document.querySelector('.open-modal');
+var $background = document.querySelector('.background');
+var $cancel = document.querySelector('.cancel');
+var $confirm = document.querySelector('.confirm');
 
 var $submit = document.querySelector('#form');
 
@@ -139,6 +143,29 @@ function renderList(list) {
 
 renderList(data.entries);
 
+$openModal.addEventListener('click', openModal);
+$cancel.addEventListener('click', cancelDelete);
+$confirm.addEventListener('click', deleteEntry);
+
+function openModal(event) {
+  $background.className = 'background unhidden';
+}
+
+function cancelDelete(event) {
+  $background.className = 'background';
+}
+
+function deleteEntry(event) {
+  var newList = data.entries.filter(function (item) {
+    return item.id !== data.editing.id;
+  });
+  data.entries = newList;
+  data.editing = null;
+  renderList(newList);
+  switchView('entries');
+  $background.className = 'background';
+}
+
 function switchView(view) {
   if (view === 'journal-entry') {
     $entryForm.classList.remove('hidden');
@@ -147,6 +174,7 @@ function switchView(view) {
       $formHeader.textContent = 'Edit Entry';
     } else {
       $formHeader.textContent = 'New Entry';
+      $openModal.className = 'delete hidden';
     }
   } else {
     $entryForm.classList.add('hidden');

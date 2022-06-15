@@ -83,6 +83,11 @@ nav > ul > li > a {
   visibility: hidden;
 }
 
+#delete {
+  color: red;
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 625px) {
   .entries-header > ul > li > a {
     font-size: 1.6rem;
@@ -94,3 +99,49 @@ nav > ul > li > a {
     font-size: 1.6rem;
   }
 }
+
+.background {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.background.unhidden {
+  visibility: visible;
+}
+
+.pop-up {
+  background-color: white;
+}
+
+.cancel,
+.confirm {
+  margin-top: 2rem;
+}
+
+/* .cancel {
+  margin-right: 6rem;
+  color: black;
+  background-color:  gray;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: large;
+}
+
+.confirm {
+  margin-left: 6rem;
+  color: white;
+  background-color: red;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: large;
+} */
